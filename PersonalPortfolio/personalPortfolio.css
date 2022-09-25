@@ -36,7 +36,7 @@ img {
   overflow: hidden;
 }
 
-.btn {
+.button {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 700;
@@ -50,7 +50,7 @@ img {
   transition: all .5s ease-in-out;
 }
 
-.btn:hover {
+.button:hover {
   background-color: rgb(230, 14, 14);
 }
 

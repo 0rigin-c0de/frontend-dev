@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Techincal Documentation Page</title>
+    <link href="documentationPage.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Git Tutorial</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Description"> Description </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Importing_a_new_project">
+            Importing a new project
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Making_changes"> Making changes </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Git_tracks_content_not_files">
+            Git tracks content not files
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Viewing_project_history">
+            Viewing project history
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <p>
+        <a href="https://learngitbranching.js.org/">Git Branching - Learn Git from here</a>
+      </p>
+      <section class="main-section" id="Description">
+        <header>Description</header>
+        <ul>
+          <li>
+            This tutorial explains how to import a new project into Git, make
+            changes to it, and share changes with other developers.
+          </li>
+          <li>
+            If you are instead primarily interested in using Git to fetch a
+            project, for example, to test the latest version, you may prefer to
+            start with the first two chapters of The Git User’s Manual.
+          </li>
+          <li>
+            First, note that you can get documentation for a command such as git
+            log --graph with:$ man git-log or:$ git help log
+          </li>
+          <li>
+            With the latter, you can use the manual viewer of your choice; see
+            git-help[1] for more information.
+          </li>
+          <li>
+            It is a good idea to introduce yourself to Git with your name and
+            public email address before doing any operation. The easiest way to
+            do so is:$ git config --global user.name "Your Name Comes Here" $
+            git config --global user.email you@yourdomain.example.com
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Importing_a_new_project">
+        <header>Importing a new project</header>
+        <p>
+          Assume you have a tarball project.tar.gz with your initial work. You
+          can place it under Git revision control as follows.
+        </p>
+        <code>$ tar xzf project.tar.gz $ cd project $ git init</code>
+        <p>Git will reply</p>
+        <code>Initialized empty Git repository in .git/</code>
+        <p>
+          You’ve now initialized the working directory—​you may notice a new
+          directory created, named ".git". Next, tell Git to take a snapshot of
+          the contents of all files under the current directory (note the .),
+          with git add:
+        </p>
+        <code>$ git add .</code>
+        <p>
+          This snapshot is now stored in a temporary staging area which Git
+          calls the "index". You can permanently store the contents of the index
+          in the repository with git commit:
+        </p>
+        <code>$ git commit</code>
+        <p>
+          This will prompt you for a commit message. You’ve now stored the first
+          version of your project in Git.
+        </p>
+      </section>
+      <section class="main-section" id="Making_changes">
+        <header>Making changes</header>
+        <p>Modify some files, then add their updated contents to the index:</p>
+        <code>$ git add file1 file2 file3</code>
+        <p>
+          You are now ready to commit. You can see what is about to be committed
+          using git diff with the --cached option:
+        </p>
+        <code>$ git diff --cached</code>
+        <p>
+          (Without --cached, git diff will show you any changes that you’ve made
+          but not yet added to the index.) You can also get a brief summary of
+          the situation with git status:
+        </p>
+        <code>$ git status On branch master Changes to be committed: Your branch is
+          up to date with 'origin/master'. (use "git restore --staged file..."
+          to unstage) modified: file1 modified: file2 modified: file3</code>
+        <p>If you need to make any further adjustments, do so now, and then add
+          any newly modified content to the index. Finally, commit your changes
+          with:</p>
+        <code>$ git commit</code>
+        <p>This will again prompt you for a message describing the change, and
+          then record a new version of the project. Alternatively, instead of
+          running git add beforehand, you can use</p>
+        <code>$ git commit -a</code>
+        <p>which will automatically notice any modified (but not new) files, add
+          them to the index, and commit, all in one step. A note on commit
+          messages: Though not required, it’s a good idea to begin the commit
+          message with a single short (less than 50 character) line summarizing
+          the change, followed by a blank line and then a more thorough
+          description. The text up to the first blank line in a commit message
+          is treated as the commit title, and that title is used throughout Git.
+          For example, git-format-patch[1] turns a commit into email, and it
+          uses the title on the Subject line and the rest of the commit in the
+          body.</p>
+      </section>
+      <section class="main-section" id="Git_tracks_content_not_files">
+        <header>Git tracks content not files</header>
+        <p>
+          Many revision control systems provide an add command that tells the
+          system to start tracking changes to a new file. Git’s add command does
+          something simpler and more powerful: git add is used both for new and
+          newly modified files, and in both cases it takes a snapshot of the
+          given files and stages that content in the index, ready for inclusion
+          in the next commit.
+        </p>
+      </section>
+      <section class="main-section" id="Viewing_project_history">
+        <header>Viewing project history</header>
+        <p>At any point you can view the history of your changes using</p>
+        <code>$ git log</code>
+        <p>If you also want to see complete diffs at each step, use</p>
+        <code>$ git log -p</code>
+        <p>
+          Often the overview of the change is useful to get a feel of each step
+        </p>
+        <code>$ git log --stat --summary</code>
+      </section>
+    </main>
+  </body>
+  </html>

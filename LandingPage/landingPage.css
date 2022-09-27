@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+  }
+
+  body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  #nav-bar{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #nav-bar ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  #nav-bar ul li{
+    display: block;
+  }
+
+  #nav-bar ul li a{
+    text-decoration: none;
+    padding: 8px 16px;
+    color: black;
+    background: hsl(0, 0%, 95%);
+    display: block;
+    border-radius: 12px;
+  }
+
+  header{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  header img{
+    max-width: 560px;
+    width: 100%;
+  }
+
+  main{
+    background-color: hsl(0,0%,95%);
+    width: 100%;
+    max-width: 700px;
+    padding: 50px;
+    border-radius: 48px;
+    margin: 0 auto;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    border: white 24px solid;
+
+  }
+
+  main iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: 100%;
+  }
+
+  input{
+    padding: 6px;
+    border-radius: 4px;
+  }
+
+  input[type="email"]{
+    width: 320px;
+
+  }
+
+
+
+
+  @media only screen and (max-width: 500){
+
+  }

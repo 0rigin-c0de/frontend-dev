@@ -48,9 +48,25 @@ body{
     font-weight: normal;
     margin: 40px auto;
 }
-.opt form, input[type="button"]{
+.opt{
     background-color: black;
+    text-align: center;
     color: white;
     padding: 10px;
-    margin: -14px auto;
+    margin:-14px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+ input[type="button"]:hover{
+    background-color: green;
+
+}
+input[type="button"]{
+    background-color: white;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin:-14px auto;
+    padding-left: 50px;
+    padding-right: 50px;
 }

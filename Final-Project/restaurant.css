@@ -14,11 +14,13 @@
     --big-font:5rem;
     --h2-font:2.25rem;
     --p-font:0.9rem;
+
 }
 *::selection{
     background:var(--main-color);
     color: #fff;
 }
+
 body{
     color: var(--text-color);
     background:gray;

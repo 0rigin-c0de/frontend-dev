@@ -23,7 +23,7 @@
 
 body{
     color: var(--text-color);
-    background:gray;
+    background:#502626;
     background-size: cover;
 }
 header{
@@ -263,13 +263,13 @@ section{
     width: 50px;
     left: 0;
     bottom: -8px;
-    background: var(--main-color);
+    background: #f58484;
 }
 .col ul li:not(last-child){
     margin-bottom: 15px;
 }
 .col ul li a{
-    color:darkslategrey;
+    color:rgb(207, 152, 174);
     font-size: 1.1rem;
     display: block;
     text-transform: capitalize;
